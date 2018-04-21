@@ -5,6 +5,20 @@
  */
 'use strict';
 
-var reconstructDescriptors = (function () { return null; });
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var reconstruct = _interopDefault(require('reconstruct'));
+var descriptors = _interopDefault(require('object.getownpropertydescriptors'));
+
+/**
+ * Deeply reconstruct any object iterating over its property descriptors.
+ * @param object Object that contains the properties and methods.
+ * @param λ Lambda to reconstructs object property descriptors.
+ */
+
+var reconstructDescriptors = (function (object, λ) {
+  var reconstruction = Object.create(null, reconstruct(descriptors(object), λ));
+  return reconstruction;
+});
 
 module.exports = reconstructDescriptors;

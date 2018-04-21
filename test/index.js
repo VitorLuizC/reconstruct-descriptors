@@ -19,10 +19,8 @@ test('Reconstruct from property descriptors', (context) => {
   }));
 
   context.not(original, user);
-  user.name = 'Bruno';
-  context.is(user.name, original.name);
-  delete user.name;
-  context.is(user.name, original.name);
+  context.throws(() => user.name = 'Bruno');
+  context.throws(() => delete user.name);
 });
 
 test('Returning falsy on callback is safe', (context) => {
