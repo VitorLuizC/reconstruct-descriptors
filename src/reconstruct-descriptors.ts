@@ -8,7 +8,7 @@ export type ReconstructΛ = (descriptor: PropertyDescriptor, property: symbol | 
  * @param object Object that contains the properties and methods.
  * @param λ Lambda to reconstructs object property descriptors.
  */
-export default (object: object, λ: ReconstructΛ) => {
-  const reconstruction = Object.create(null, reconstruct(descriptors(object), λ));
+export default (object: object, λ: ReconstructΛ): object => {
+  const reconstruction: object = Object.create(null, reconstruct(descriptors(object), λ));
   return reconstruction;
 };
