@@ -1,5 +1,7 @@
 # reconstruct-descriptors
 
+[![Build Status][2]][1]
+
 Deeply reconstruct any object iterating over its property descriptors.
 
 ## Install
@@ -44,3 +46,5 @@ Released under MIT license. You can see it [here][0].
 <!-- Links -->
 
 [0]: ./LICENSE
+[1]: https://travis-ci.org/VitorLuizC/reconstruct-descriptors
+[2]: https://travis-ci.org/VitorLuizC/reconstruct-descriptors.svg?branch=master
