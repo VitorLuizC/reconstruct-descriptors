@@ -1,0 +1,28 @@
+{
+  "name": "reconstruct-descriptors",
+  "version": "0.0.0",
+  "description": "Deeply reconstruct any object iterating over its property descriptors.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorLuizC/reconstruct-descriptors.git"
+  },
+  "keywords": [
+    "reconstruct",
+    "property-descriptor",
+    "object"
+  ],
+  "author": {
+    "url": "https://vitorluizc.github.io/",
+    "name": "Vitor Luiz Cavalcanti",
+    "email": "vitorluizc@outlook.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VitorLuizC/reconstruct-descriptors/issues"
+  },
+  "homepage": "https://github.com/VitorLuizC/reconstruct-descriptors#readme"
+}
