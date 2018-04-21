@@ -4,7 +4,7 @@
   "description": "Deeply reconstruct any object iterating over its property descriptors.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/VitorLuizC/reconstruct-descriptors/issues"
   },
-  "homepage": "https://github.com/VitorLuizC/reconstruct-descriptors#readme"
+  "homepage": "https://github.com/VitorLuizC/reconstruct-descriptors#readme",
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
 }
