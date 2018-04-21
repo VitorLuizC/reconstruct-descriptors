@@ -1,6 +1,6 @@
 {
   "name": "reconstruct-descriptors",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Deeply reconstruct any object iterating over its property descriptors.",
   "cdn": "dist/reconstruct-descriptors.js",
   "main": "dist/reconstruct-descriptors.cjs.js",
