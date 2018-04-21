@@ -20,7 +20,7 @@ This module exports a function that receives an object and a function to iterate
 ```js
 import reconstruct from 'reconstruct-descriptors'
 
-const immutable = (object) => reconstruct(object, (property, descriptor) => ({
+const immutable = (object) => reconstruct(object, (descriptor, property) => ({
   [property]: {
     ...descriptor,
     writable: false,

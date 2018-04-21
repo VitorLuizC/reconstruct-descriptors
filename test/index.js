@@ -10,7 +10,7 @@ test('Reconstruct from property descriptors', (context) => {
     name: 'Ryan',
   };
 
-  const user = reconstruct(original, (property, descriptor) => ({
+  const user = reconstruct(original, (descriptor, property) => ({
     [property]: {
       ...descriptor,      // A non-writable & non-configurable property
       writable: false,    // can't be deleted or changed.
@@ -18,7 +18,7 @@ test('Reconstruct from property descriptors', (context) => {
     }
   }));
 
-  context.not(object, user);
+  context.not(original, user);
   user.name = 'Bruno';
   context.is(user.name, original.name);
   delete user.name;
@@ -31,13 +31,13 @@ test('Returning falsy on callback is safe', (context) => {
     stars: 5,
   };
 
-  const user = reconstruct(original, (property, descriptor) => {
+  const user = reconstruct(original, (descriptor, property) => {
     if (property === 'name')
       return null;
     return { [property]: descriptor };
   });
 
   context.is(typeof user, 'object');
-  context.true('star' in user);
+  context.true('stars' in user);
   context.false('name' in user);
 });
