@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "lib": [ "es2015" ],
+    "module": "es2015",
+    "target": "es2015",
+    "outDir": "./dist",
+    "declarationDir": "./dist",
+    "moduleResolution": "node"
+  },
+  "files": [
+    "src/reconstruct-descriptors.ts",
+    "src/object.getownpropertydescriptors.d.ts"
+  ]
+}

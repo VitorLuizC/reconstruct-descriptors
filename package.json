@@ -11,11 +11,15 @@
   "jsdelivr": "dist/reconstruct-descriptors.js",
   "scripts": {
     "test": "ava",
-    "build:typescript": "tsc src/reconstruct-descriptors.ts --outDir dist -t es2015 -d",
     "build:bili": "bili dist/reconstruct-descriptors.js --formats cjs,es,umd --js buble --banner",
-    "build": "npm run build:typescript && npm run build:bili",
+    "build": "tsc && npm run build:bili",
     "prepare": "npm run build && npm run test"
   },
+  "files": [
+    "dist",
+    "README",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VitorLuizC/reconstruct-descriptors.git"
