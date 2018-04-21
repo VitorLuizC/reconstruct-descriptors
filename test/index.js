@@ -11,11 +11,10 @@ test('Reconstruct from property descriptors', (context) => {
   };
 
   const user = reconstruct(original, (descriptor, property) => ({
-    [property]: {
-      ...descriptor,      // A non-writable & non-configurable property
-      writable: false,    // can't be deleted or changed.
-      configurable: false,
-    }
+    [property]: Object.assign({}, descriptor, {
+      writable: false,     // A non-writable & non-configurable property
+      configurable: false, // can't be deleted or changed.
+    })
   }));
 
   context.not(original, user);
