@@ -2,9 +2,19 @@
   "name": "reconstruct-descriptors",
   "version": "0.0.0",
   "description": "Deeply reconstruct any object iterating over its property descriptors.",
-  "main": "src/index.js",
+  "cdn": "dist/reconstruct-descriptors.js",
+  "main": "dist/reconstruct-descriptors.cjs.js",
+  "unpkg": "dist/reconstruct-descriptors.js",
+  "types": "dist/reconstruct-descriptors.d.ts",
+  "module": "dist/reconstruct-descriptors.es.js",
+  "browser": "dist/reconstruct-descriptors.js",
+  "jsdelivr": "dist/reconstruct-descriptors.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "build:typescript": "tsc src/reconstruct-descriptors.ts --outDir dist -t es2015 -d",
+    "build:bili": "bili dist/reconstruct-descriptors.js --formats cjs,es,umd --js buble --banner",
+    "build": "npm run build:typescript && npm run build:bili",
+    "prepare": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
@@ -26,6 +36,12 @@
   },
   "homepage": "https://github.com/VitorLuizC/reconstruct-descriptors#readme",
   "devDependencies": {
-    "ava": "^0.25.0"
+    "ava": "^0.25.0",
+    "bili": "^3.1.0",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "object.getownpropertydescriptors": "^2.0.3",
+    "reconstruct": "^0.1.3"
   }
 }
