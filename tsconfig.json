@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "lib": [ "es2015" ],
-    "module": "es2015",
     "target": "es2015",
-    "outDir": "./dist",
-    "declarationDir": "./dist",
-    "moduleResolution": "node"
+
+    // Settings for generating type definitions.
+    "strict": true,
+    "declaration": true,
+    "declarationDir": "types/",
+
+    // Settings for module resolution.
+    "module": "es2015",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
-  "files": [
-    "src/reconstruct-descriptors.ts",
-    "src/object.getownpropertydescriptors.d.ts"
-  ]
+  "include": ["src/"],
+  "exclude": ["dist/", "types/"]
 }

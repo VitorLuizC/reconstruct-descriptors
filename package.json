@@ -1,24 +1,23 @@
 {
   "name": "reconstruct-descriptors",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Deeply reconstruct any object iterating over its property descriptors.",
-  "cdn": "dist/reconstruct-descriptors.js",
   "main": "dist/reconstruct-descriptors.cjs.js",
-  "unpkg": "dist/reconstruct-descriptors.js",
-  "types": "dist/reconstruct-descriptors.d.ts",
+  "types": "types/index.d.ts",
   "module": "dist/reconstruct-descriptors.es.js",
   "browser": "dist/reconstruct-descriptors.js",
-  "jsdelivr": "dist/reconstruct-descriptors.js",
   "scripts": {
     "test": "ava",
-    "build:bili": "bili dist/reconstruct-descriptors.js --formats cjs,es,umd --js buble --banner",
+    "pretest": "npm run build",
     "build": "tsc && npm run build:bili",
-    "prepare": "npm run build && npm run test"
+    "build:bili": "bili src/index.js --formats cjs,es,umd --js buble --banner",
+    "prepare": "npm run test"
   },
   "files": [
-    "dist",
-    "README",
-    "LICENSE"
+    "dist/",
+    "types/",
+    "LICENSE",
+    "README.md"
   ],
   "repository": {
     "type": "git",
