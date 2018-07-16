@@ -41,11 +41,11 @@
   "homepage": "https://github.com/VitorLuizC/reconstruct-descriptors#readme",
   "devDependencies": {
     "ava": "^0.25.0",
-    "bili": "^3.1.0",
-    "typescript": "^2.8.3"
+    "bili": "^3.1.2",
+    "typescript": "^2.9.2"
   },
   "dependencies": {
     "object.getownpropertydescriptors": "^2.0.3",
-    "reconstruct": "^0.1.3"
+    "reconstruct": "^0.2.0"
   }
 }
