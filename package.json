@@ -1,6 +1,6 @@
 {
   "name": "reconstruct-descriptors",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Deeply reconstruct any object iterating over its property descriptors.",
   "main": "dist/reconstruct-descriptors.cjs.js",
   "types": "types/index.d.ts",
@@ -45,6 +45,6 @@
   },
   "dependencies": {
     "object.getownpropertydescriptors": "^2.0.3",
-    "reconstruct": "^0.2.0"
+    "reconstruct": "^0.2.1"
   }
 }

@@ -3724,9 +3724,9 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-reconstruct@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/reconstruct/-/reconstruct-0.2.0.tgz#1f78e45f246578c21b43c8b47740fb20da806175"
+reconstruct@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/reconstruct/-/reconstruct-0.2.1.tgz#829becfd959d8085055efa1e4d99803869de9b1e"
   dependencies:
     object-assign "^4.1.1"
     object-keys "^1.0.12"

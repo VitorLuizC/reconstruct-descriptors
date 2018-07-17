@@ -1,9 +1,14 @@
 import reconstruct from 'reconstruct';
 import descriptors from 'object.getownpropertydescriptors';
 
+export type Falsy = '' | 0 | false | null | undefined;
+
 export type PropertyName = string | symbol | number;
 
-export type ReconstructΛ = (descriptor: PropertyDescriptor, property: PropertyName) => PropertyDescriptorMap;
+export type ReconstructΛ = (
+  descriptor: PropertyDescriptor,
+  property: PropertyName
+) => PropertyDescriptorMap | Falsy;
 
 /**
  * Deeply reconstruct any object iterating over its property descriptors.
