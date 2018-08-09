@@ -1,11 +1,14 @@
 {
   "name": "reconstruct-descriptors",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Deeply reconstruct any object iterating over its property descriptors.",
+  "cdn": "dist/reconstruct-descriptors.js",
   "main": "dist/reconstruct-descriptors.cjs.js",
   "types": "types/index.d.ts",
+  "unpkg": "dist/reconstruct-descriptors.js",
   "module": "dist/reconstruct-descriptors.es.js",
-  "browser": "dist/reconstruct-descriptors.js",
+  "jsdelivr": "dist/reconstruct-descriptors.js",
+  "umd:main": "dist/reconstruct-descriptors.js",
   "scripts": {
     "test": "ava",
     "pretest": "npm run build",
@@ -41,10 +44,10 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "bili": "^3.1.2",
-    "typescript": "^2.9.2"
+    "typescript": "^3.0.1"
   },
   "dependencies": {
-    "object.getownpropertydescriptors": "^2.0.3",
-    "reconstruct": "^0.2.1"
+    "object-descriptors": "^0.1.0",
+    "reconstruct": "^0.3.0"
   }
 }
